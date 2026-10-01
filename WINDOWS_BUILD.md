@@ -23,34 +23,10 @@ att själv installera Python, skapa en venv eller installera paket.
 > Viktigt: Windows-`.exe` ska byggas på Windows. Bygg inte
 > Windows-versionen med PyInstaller på Linux.
 
-------------------------------------------------------------------------
-
-## 1. Hämta projektet med Git
-
-På Windows-datorn, klona repot och gå in i projektmappen.
-
-Exempel:
-
-``` powershell
-git clone <REPO-URL>
-cd kontorsskylt
-```
-
-Om repot redan finns:
-
-``` powershell
-git pull
-```
-
-Kontrollera att den fungerande filen finns:
-
-``` text
-kontorsskylt.py
-```
 
 ------------------------------------------------------------------------
 
-## 2. Kontrollera Python
+## 1. Kontrollera Python
 
 Python behövs på **byggdatorn**, men inte på datorerna som senare bara
 kör den färdiga `.exe`-filen.
@@ -74,7 +50,7 @@ alternativet som lägger Python i `PATH`.
 
 ------------------------------------------------------------------------
 
-## 3. Skapa en ren virtuell miljö
+## 2. Skapa en ren virtuell miljö
 
 Om `python` fungerar:
 
@@ -116,7 +92,7 @@ och försök sedan igen:
 
 ------------------------------------------------------------------------
 
-## 4. Installera beroenden
+## 3. Installera beroenden
 
 Med `.venv` aktiverad:
 
@@ -134,7 +110,7 @@ python -m PyInstaller --version
 
 ------------------------------------------------------------------------
 
-## 5. Testa Python-programmet på Windows först
+## 4. Testa Python-programmet på Windows först
 
 Innan någon `.exe` byggs ska originalprogrammet testas direkt med
 Python:
@@ -173,7 +149,7 @@ PyInstallerproblem.
 
 ------------------------------------------------------------------------
 
-## 6. Första PyInstaller-bygget
+## 5. Första PyInstaller-bygget
 
 När Python-versionen fungerar på Windows kan programmet paketeras.
 
@@ -208,7 +184,7 @@ dist\Kontorsskylt.exe
 
 ------------------------------------------------------------------------
 
-## 7. Testa den färdiga EXE-filen
+## 6. Testa den färdiga EXE-filen
 
 Starta:
 
@@ -234,7 +210,7 @@ distributionstestet.
 
 ------------------------------------------------------------------------
 
-## 8. Om EXE-versionen inte fungerar men Python-versionen fungerar
+## 7. Om EXE-versionen inte fungerar men Python-versionen fungerar
 
 Då är problemet sannolikt kopplat till paketeringen snarare än den
 grundläggande applikationslogiken.
@@ -258,7 +234,7 @@ identifierats.
 
 ------------------------------------------------------------------------
 
-## 9. Git och filer som bör ignoreras
+## 8. Git och filer som bör ignoreras
 
 Den virtuella miljön och PyInstallers byggmappar ska normalt inte
 checkas in.
@@ -283,7 +259,7 @@ när projektet kommit så långt.
 
 ------------------------------------------------------------------------
 
-## 10. Rekommenderad arbetsordning på den nya datorn
+## 9. Rekommenderad arbetsordning på den nya datorn
 
 Kortversion:
 
